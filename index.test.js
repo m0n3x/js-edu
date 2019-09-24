@@ -30,7 +30,7 @@ const talentedStudentSpeedConfig = {
 
 describe('js-edu', () => {
     describe('for general student with programming skills', () => {
-        it.only('should could take 200 weeks for family focus', () => {
+        it('should could take 200 weeks for family focus', () => {
             const weeks = getTimeForEducation('family', true,  defaultStudentSpeedConfig);
     
             expect(weeks).to.equal(200);
