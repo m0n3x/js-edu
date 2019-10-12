@@ -9,17 +9,11 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
 ) {
-    let weeks = 0;
-    let MAX_LEVEL = 800 + 500;
-    let level = 0;
-
+      
     if (knowsProgramming) {
-        MAX_LEVEL -= 500;
+        return Math.ceil(800 / config[focus])
     }
-    while (level < MAX_LEVEL) {
-      level+=config[focus];
-      weeks++;
-    }
-
-    return weeks;
+    else { 
+        return Math.ceil(1300 / config[focus])
+ };
 };
